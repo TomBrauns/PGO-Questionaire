@@ -1,0 +1,705 @@
+define(['dart_sdk', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/painting/borders.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/widgets/single_child_scroll_view.dart', 'packages/flutter/src/material/checkbox_list_tile.dart'], (function load__packages__multiselect_formfield__multiselect_dialog_dart(dart_sdk, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__painting__borders$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__widgets__single_child_scroll_view$46dart, packages__flutter__src__material__checkbox_list_tile$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const navigator = packages__flutter__src__widgets__widget_span$46dart.src__widgets__navigator;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const borders = packages__flutter__src__painting__borders$46dart.src__painting__borders;
+  const dialog = packages__flutter__src__material__icon_button$46dart.src__material__dialog;
+  const list_tile = packages__flutter__src__material__icon_button$46dart.src__material__list_tile;
+  const text_button = packages__flutter__src__material__icon_button$46dart.src__material__text_button;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const single_child_scroll_view = packages__flutter__src__widgets__single_child_scroll_view$46dart.src__widgets__single_child_scroll_view;
+  const checkbox_list_tile = packages__flutter__src__material__checkbox_list_tile$46dart.src__material__checkbox_list_tile;
+  var multiselect_dialog = Object.create(dart.library);
+  var $addAll = dartx.addAll;
+  var $add = dartx.add;
+  var $remove = dartx.remove;
+  var $map = dartx.map;
+  var $toList = dartx.toList;
+  var $contains = dartx.contains;
+  dart._checkModuleNullSafetyMode(true);
+  var T = {
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    ObjectN: () => (T.ObjectN = dart.constFn(dart.nullable(core.Object)))(),
+    JSArrayOfWidget: () => (T.JSArrayOfWidget = dart.constFn(_interceptors.JSArray$(framework.Widget)))(),
+    boolN: () => (T.boolN = dart.constFn(dart.nullable(core.bool)))(),
+    boolNTovoid: () => (T.boolNTovoid = dart.constFn(dart.fnType(dart.void, [T.boolN()])))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: text_style.TextStyle.prototype,
+        [TextStyle_fontFeatures]: null,
+        [TextStyle_shadows]: null,
+        [TextStyle_debugLabel]: null,
+        [TextStyle_decorationThickness]: null,
+        [TextStyle_decorationStyle]: null,
+        [TextStyle_decorationColor]: null,
+        [TextStyle_decoration]: null,
+        [TextStyle_background]: null,
+        [TextStyle_foreground]: null,
+        [TextStyle_locale]: null,
+        [TextStyle_height]: null,
+        [TextStyle_textBaseline]: null,
+        [TextStyle_wordSpacing]: null,
+        [TextStyle_letterSpacing]: null,
+        [TextStyle_fontStyle]: null,
+        [TextStyle_fontWeight]: null,
+        [TextStyle_fontSize]: null,
+        [TextStyle__package]: null,
+        [TextStyle__fontFamilyFallback]: null,
+        [TextStyle_fontFamily]: null,
+        [TextStyle_backgroundColor]: null,
+        [TextStyle_color]: null,
+        [TextStyle_inherit]: true
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 76,
+        [_Location_file]: null
+      });
+    },
+    get C2() {
+      return C[2] = dart.constList([C[3] || CT.C3], widget_inspector._Location);
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[2] || CT.C2,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 75,
+        [_Location_file]: "file:///B:/Programme/flutter/.pub-cache/hosted/pub.dartlang.org/multiselect_formfield-0.1.6/lib/multiselect_dialog.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "contentPadding",
+        [_Location_column]: 11,
+        [_Location_line]: 74,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 75,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6, C[7] || CT.C7], widget_inspector._Location);
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 73,
+        [_Location_file]: "file:///B:/Programme/flutter/.pub-cache/hosted/pub.dartlang.org/multiselect_formfield-0.1.6/lib/multiselect_dialog.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 73,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10], widget_inspector._Location);
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 72,
+        [_Location_file]: "file:///B:/Programme/flutter/.pub-cache/hosted/pub.dartlang.org/multiselect_formfield-0.1.6/lib/multiselect_dialog.dart"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 47,
+        [_Location_line]: 82,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.constList([C[13] || CT.C13], widget_inspector._Location);
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[12] || CT.C12,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 82,
+        [_Location_file]: "file:///B:/Programme/flutter/.pub-cache/hosted/pub.dartlang.org/multiselect_formfield-0.1.6/lib/multiselect_dialog.dart"
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 82,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 11,
+        [_Location_line]: 83,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.constList([C[16] || CT.C16, C[17] || CT.C17], widget_inspector._Location);
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[15] || CT.C15,
+        [_Location_name]: null,
+        [_Location_column]: 9,
+        [_Location_line]: 81,
+        [_Location_file]: "file:///B:/Programme/flutter/.pub-cache/hosted/pub.dartlang.org/multiselect_formfield-0.1.6/lib/multiselect_dialog.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 43,
+        [_Location_line]: 86,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.constList([C[20] || CT.C20], widget_inspector._Location);
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 86,
+        [_Location_file]: "file:///B:/Programme/flutter/.pub-cache/hosted/pub.dartlang.org/multiselect_formfield-0.1.6/lib/multiselect_dialog.dart"
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 86,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 11,
+        [_Location_line]: 87,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.constList([C[23] || CT.C23, C[24] || CT.C24], widget_inspector._Location);
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[22] || CT.C22,
+        [_Location_name]: null,
+        [_Location_column]: 9,
+        [_Location_line]: 85,
+        [_Location_file]: "file:///B:/Programme/flutter/.pub-cache/hosted/pub.dartlang.org/multiselect_formfield-0.1.6/lib/multiselect_dialog.dart"
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 7,
+        [_Location_line]: 69,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "shape",
+        [_Location_column]: 7,
+        [_Location_line]: 70,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "contentPadding",
+        [_Location_column]: 7,
+        [_Location_line]: 71,
+        [_Location_file]: null
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "content",
+        [_Location_column]: 7,
+        [_Location_line]: 72,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "actions",
+        [_Location_column]: 7,
+        [_Location_line]: 80,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.constList([C[27] || CT.C27, C[28] || CT.C28, C[29] || CT.C29, C[30] || CT.C30, C[31] || CT.C31], widget_inspector._Location);
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[26] || CT.C26,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 68,
+        [_Location_file]: "file:///B:/Programme/flutter/.pub-cache/hosted/pub.dartlang.org/multiselect_formfield-0.1.6/lib/multiselect_dialog.dart"
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 19,
+        [_Location_line]: 100,
+        [_Location_file]: null
+      });
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 9,
+        [_Location_line]: 101,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C[33] = dart.constList([C[34] || CT.C34, C[35] || CT.C35], widget_inspector._Location);
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[33] || CT.C33,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 99,
+        [_Location_file]: "file:///B:/Programme/flutter/.pub-cache/hosted/pub.dartlang.org/multiselect_formfield-0.1.6/lib/multiselect_dialog.dart"
+      });
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "value",
+        [_Location_column]: 7,
+        [_Location_line]: 96,
+        [_Location_file]: null
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "checkColor",
+        [_Location_column]: 7,
+        [_Location_line]: 97,
+        [_Location_file]: null
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "activeColor",
+        [_Location_column]: 7,
+        [_Location_line]: 98,
+        [_Location_file]: null
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 7,
+        [_Location_line]: 99,
+        [_Location_file]: null
+      });
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controlAffinity",
+        [_Location_column]: 7,
+        [_Location_line]: 103,
+        [_Location_file]: null
+      });
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onChanged",
+        [_Location_column]: 7,
+        [_Location_line]: 104,
+        [_Location_file]: null
+      });
+    },
+    get C37() {
+      return C[37] = dart.constList([C[38] || CT.C38, C[39] || CT.C39, C[40] || CT.C40, C[41] || CT.C41, C[42] || CT.C42, C[43] || CT.C43], widget_inspector._Location);
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[37] || CT.C37,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 95,
+        [_Location_file]: "file:///B:/Programme/flutter/.pub-cache/hosted/pub.dartlang.org/multiselect_formfield-0.1.6/lib/multiselect_dialog.dart"
+      });
+    }
+  }, false);
+  var C = Array(44).fill(void 0);
+  var I = [
+    "package:multiselect_formfield/multiselect_dialog.dart",
+    "file:///B:/Programme/flutter/.pub-cache/hosted/pub.dartlang.org/multiselect_formfield-0.1.6/lib/multiselect_dialog.dart"
+  ];
+  var value$ = dart.privateName(multiselect_dialog, "MultiSelectDialogItem.value");
+  var label$ = dart.privateName(multiselect_dialog, "MultiSelectDialogItem.label");
+  const _is_MultiSelectDialogItem_default = Symbol('_is_MultiSelectDialogItem_default');
+  multiselect_dialog.MultiSelectDialogItem$ = dart.generic(V => {
+    class MultiSelectDialogItem extends core.Object {
+      get value() {
+        return this[value$];
+      }
+      set value(value) {
+        super.value = value;
+      }
+      get label() {
+        return this[label$];
+      }
+      set label(value) {
+        super.label = value;
+      }
+    }
+    (MultiSelectDialogItem.new = function(value, label) {
+      this[value$] = value;
+      this[label$] = label;
+      ;
+    }).prototype = MultiSelectDialogItem.prototype;
+    dart.addTypeTests(MultiSelectDialogItem);
+    MultiSelectDialogItem.prototype[_is_MultiSelectDialogItem_default] = true;
+    dart.addTypeCaches(MultiSelectDialogItem);
+    dart.setLibraryUri(MultiSelectDialogItem, I[0]);
+    dart.setFieldSignature(MultiSelectDialogItem, () => ({
+      __proto__: dart.getFields(MultiSelectDialogItem.__proto__),
+      value: dart.finalFieldType(V),
+      label: dart.finalFieldType(dart.nullable(core.String))
+    }));
+    return MultiSelectDialogItem;
+  });
+  multiselect_dialog.MultiSelectDialogItem = multiselect_dialog.MultiSelectDialogItem$();
+  dart.addTypeTests(multiselect_dialog.MultiSelectDialogItem, _is_MultiSelectDialogItem_default);
+  var items$ = dart.privateName(multiselect_dialog, "MultiSelectDialog.items");
+  var initialSelectedValues$ = dart.privateName(multiselect_dialog, "MultiSelectDialog.initialSelectedValues");
+  var title$ = dart.privateName(multiselect_dialog, "MultiSelectDialog.title");
+  var okButtonLabel$ = dart.privateName(multiselect_dialog, "MultiSelectDialog.okButtonLabel");
+  var cancelButtonLabel$ = dart.privateName(multiselect_dialog, "MultiSelectDialog.cancelButtonLabel");
+  var labelStyle$ = dart.privateName(multiselect_dialog, "MultiSelectDialog.labelStyle");
+  var dialogShapeBorder$ = dart.privateName(multiselect_dialog, "MultiSelectDialog.dialogShapeBorder");
+  var checkBoxCheckColor$ = dart.privateName(multiselect_dialog, "MultiSelectDialog.checkBoxCheckColor");
+  var checkBoxActiveColor$ = dart.privateName(multiselect_dialog, "MultiSelectDialog.checkBoxActiveColor");
+  var TextStyle_fontFeatures = dart.privateName(text_style, "TextStyle.fontFeatures");
+  var TextStyle_shadows = dart.privateName(text_style, "TextStyle.shadows");
+  var TextStyle_debugLabel = dart.privateName(text_style, "TextStyle.debugLabel");
+  var TextStyle_decorationThickness = dart.privateName(text_style, "TextStyle.decorationThickness");
+  var TextStyle_decorationStyle = dart.privateName(text_style, "TextStyle.decorationStyle");
+  var TextStyle_decorationColor = dart.privateName(text_style, "TextStyle.decorationColor");
+  var TextStyle_decoration = dart.privateName(text_style, "TextStyle.decoration");
+  var TextStyle_background = dart.privateName(text_style, "TextStyle.background");
+  var TextStyle_foreground = dart.privateName(text_style, "TextStyle.foreground");
+  var TextStyle_locale = dart.privateName(text_style, "TextStyle.locale");
+  var TextStyle_height = dart.privateName(text_style, "TextStyle.height");
+  var TextStyle_textBaseline = dart.privateName(text_style, "TextStyle.textBaseline");
+  var TextStyle_wordSpacing = dart.privateName(text_style, "TextStyle.wordSpacing");
+  var TextStyle_letterSpacing = dart.privateName(text_style, "TextStyle.letterSpacing");
+  var TextStyle_fontStyle = dart.privateName(text_style, "TextStyle.fontStyle");
+  var TextStyle_fontWeight = dart.privateName(text_style, "TextStyle.fontWeight");
+  var TextStyle_fontSize = dart.privateName(text_style, "TextStyle.fontSize");
+  var TextStyle__package = dart.privateName(text_style, "TextStyle._package");
+  var TextStyle__fontFamilyFallback = dart.privateName(text_style, "TextStyle._fontFamilyFallback");
+  var TextStyle_fontFamily = dart.privateName(text_style, "TextStyle.fontFamily");
+  var TextStyle_backgroundColor = dart.privateName(text_style, "TextStyle.backgroundColor");
+  var TextStyle_color = dart.privateName(text_style, "TextStyle.color");
+  var TextStyle_inherit = dart.privateName(text_style, "TextStyle.inherit");
+  const _is_MultiSelectDialog_default = Symbol('_is_MultiSelectDialog_default');
+  multiselect_dialog.MultiSelectDialog$ = dart.generic(V => {
+    var _MultiSelectDialogStateOfV = () => (_MultiSelectDialogStateOfV = dart.constFn(multiselect_dialog._MultiSelectDialogState$(V)))();
+    class MultiSelectDialog extends framework.StatefulWidget {
+      get items() {
+        return this[items$];
+      }
+      set items(value) {
+        super.items = value;
+      }
+      get initialSelectedValues() {
+        return this[initialSelectedValues$];
+      }
+      set initialSelectedValues(value) {
+        super.initialSelectedValues = value;
+      }
+      get title() {
+        return this[title$];
+      }
+      set title(value) {
+        super.title = value;
+      }
+      get okButtonLabel() {
+        return this[okButtonLabel$];
+      }
+      set okButtonLabel(value) {
+        super.okButtonLabel = value;
+      }
+      get cancelButtonLabel() {
+        return this[cancelButtonLabel$];
+      }
+      set cancelButtonLabel(value) {
+        super.cancelButtonLabel = value;
+      }
+      get labelStyle() {
+        return this[labelStyle$];
+      }
+      set labelStyle(value) {
+        super.labelStyle = value;
+      }
+      get dialogShapeBorder() {
+        return this[dialogShapeBorder$];
+      }
+      set dialogShapeBorder(value) {
+        super.dialogShapeBorder = value;
+      }
+      get checkBoxCheckColor() {
+        return this[checkBoxCheckColor$];
+      }
+      set checkBoxCheckColor(value) {
+        super.checkBoxCheckColor = value;
+      }
+      get checkBoxActiveColor() {
+        return this[checkBoxActiveColor$];
+      }
+      set checkBoxActiveColor(value) {
+        super.checkBoxActiveColor = value;
+      }
+      createState() {
+        return new (_MultiSelectDialogStateOfV()).new();
+      }
+    }
+    (MultiSelectDialog.new = function(opts) {
+      let key = opts && 'key' in opts ? opts.key : null;
+      let items = opts && 'items' in opts ? opts.items : null;
+      let initialSelectedValues = opts && 'initialSelectedValues' in opts ? opts.initialSelectedValues : null;
+      let title = opts && 'title' in opts ? opts.title : null;
+      let okButtonLabel = opts && 'okButtonLabel' in opts ? opts.okButtonLabel : null;
+      let cancelButtonLabel = opts && 'cancelButtonLabel' in opts ? opts.cancelButtonLabel : null;
+      let labelStyle = opts && 'labelStyle' in opts ? opts.labelStyle : C[0] || CT.C0;
+      if (labelStyle == null) dart.nullFailed(I[1], 28, 12, "labelStyle");
+      let dialogShapeBorder = opts && 'dialogShapeBorder' in opts ? opts.dialogShapeBorder : null;
+      let checkBoxActiveColor = opts && 'checkBoxActiveColor' in opts ? opts.checkBoxActiveColor : null;
+      let checkBoxCheckColor = opts && 'checkBoxCheckColor' in opts ? opts.checkBoxCheckColor : null;
+      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+      this[items$] = items;
+      this[initialSelectedValues$] = initialSelectedValues;
+      this[title$] = title;
+      this[okButtonLabel$] = okButtonLabel;
+      this[cancelButtonLabel$] = cancelButtonLabel;
+      this[labelStyle$] = labelStyle;
+      this[dialogShapeBorder$] = dialogShapeBorder;
+      this[checkBoxActiveColor$] = checkBoxActiveColor;
+      this[checkBoxCheckColor$] = checkBoxCheckColor;
+      MultiSelectDialog.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+      ;
+    }).prototype = MultiSelectDialog.prototype;
+    dart.addTypeTests(MultiSelectDialog);
+    MultiSelectDialog.prototype[_is_MultiSelectDialog_default] = true;
+    dart.addTypeCaches(MultiSelectDialog);
+    dart.setMethodSignature(MultiSelectDialog, () => ({
+      __proto__: dart.getMethods(MultiSelectDialog.__proto__),
+      createState: dart.fnType(framework.State$(framework.StatefulWidget), [])
+    }));
+    dart.setLibraryUri(MultiSelectDialog, I[0]);
+    dart.setFieldSignature(MultiSelectDialog, () => ({
+      __proto__: dart.getFields(MultiSelectDialog.__proto__),
+      items: dart.finalFieldType(dart.nullable(core.List$(multiselect_dialog.MultiSelectDialogItem$(V)))),
+      initialSelectedValues: dart.finalFieldType(dart.nullable(core.List$(V))),
+      title: dart.finalFieldType(dart.nullable(framework.Widget)),
+      okButtonLabel: dart.finalFieldType(dart.nullable(core.String)),
+      cancelButtonLabel: dart.finalFieldType(dart.nullable(core.String)),
+      labelStyle: dart.finalFieldType(text_style.TextStyle),
+      dialogShapeBorder: dart.finalFieldType(dart.nullable(borders.ShapeBorder)),
+      checkBoxCheckColor: dart.finalFieldType(dart.nullable(ui.Color)),
+      checkBoxActiveColor: dart.finalFieldType(dart.nullable(ui.Color))
+    }));
+    return MultiSelectDialog;
+  });
+  multiselect_dialog.MultiSelectDialog = multiselect_dialog.MultiSelectDialog$();
+  dart.addTypeTests(multiselect_dialog.MultiSelectDialog, _is_MultiSelectDialog_default);
+  var _selectedValues = dart.privateName(multiselect_dialog, "_selectedValues");
+  var _onItemCheckedChange = dart.privateName(multiselect_dialog, "_onItemCheckedChange");
+  var _onCancelTap = dart.privateName(multiselect_dialog, "_onCancelTap");
+  var _onSubmitTap = dart.privateName(multiselect_dialog, "_onSubmitTap");
+  var _buildItem = dart.privateName(multiselect_dialog, "_buildItem");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  const _is__MultiSelectDialogState_default = Symbol('_is__MultiSelectDialogState_default');
+  multiselect_dialog._MultiSelectDialogState$ = dart.generic(V => {
+    var JSArrayOfV = () => (JSArrayOfV = dart.constFn(_interceptors.JSArray$(V)))();
+    var ListOfV = () => (ListOfV = dart.constFn(core.List$(V)))();
+    var MultiSelectDialogItemOfV = () => (MultiSelectDialogItemOfV = dart.constFn(multiselect_dialog.MultiSelectDialogItem$(V)))();
+    class _MultiSelectDialogState extends framework.State$(multiselect_dialog.MultiSelectDialog$(V)) {
+      initState() {
+        super.initState();
+        if (this.widget.initialSelectedValues != null) {
+          this[_selectedValues][$addAll](dart.nullCheck(this.widget.initialSelectedValues));
+        }
+      }
+      [_onItemCheckedChange](itemValue, checked) {
+        this.setState(dart.fn(() => {
+          if (dart.nullCheck(checked)) {
+            this[_selectedValues][$add](itemValue);
+          } else {
+            this[_selectedValues][$remove](itemValue);
+          }
+        }, T.VoidTovoid()));
+      }
+      [_onCancelTap]() {
+        navigator.Navigator.pop(T.ObjectN(), this.context);
+      }
+      [_onSubmitTap]() {
+        navigator.Navigator.pop(ListOfV(), this.context, this[_selectedValues]);
+      }
+      build(context) {
+        if (context == null) dart.nullFailed(I[1], 67, 29, "context");
+        return new dialog.AlertDialog.new({title: this.widget.title, shape: this.widget.dialogShapeBorder, contentPadding: new edge_insets.EdgeInsets.only({top: 12.0}), content: new single_child_scroll_view.SingleChildScrollView.new({child: new list_tile.ListTileTheme.new({contentPadding: new edge_insets.EdgeInsets.fromLTRB(14.0, 0.0, 24.0, 0.0), child: new basic.ListBody.new({children: dart.nullCheck(this.widget.items)[$map](framework.Widget, dart.bind(this, _buildItem))[$toList](), $creationLocationd_0dea112b090073317d4: C[1] || CT.C1}), $creationLocationd_0dea112b090073317d4: C[4] || CT.C4}), $creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), actions: T.JSArrayOfWidget().of([new text_button.TextButton.new({child: new text.Text.new(dart.nullCheck(this.widget.cancelButtonLabel), {$creationLocationd_0dea112b090073317d4: C[11] || CT.C11}), onPressed: dart.bind(this, _onCancelTap), $creationLocationd_0dea112b090073317d4: C[14] || CT.C14}), new text_button.TextButton.new({child: new text.Text.new(dart.nullCheck(this.widget.okButtonLabel), {$creationLocationd_0dea112b090073317d4: C[18] || CT.C18}), onPressed: dart.bind(this, _onSubmitTap), $creationLocationd_0dea112b090073317d4: C[21] || CT.C21})]), $creationLocationd_0dea112b090073317d4: C[25] || CT.C25});
+      }
+      [_buildItem](item) {
+        MultiSelectDialogItemOfV().as(item);
+        if (item == null) dart.nullFailed(I[1], 93, 46, "item");
+        let checked = this[_selectedValues][$contains](item.value);
+        return new checkbox_list_tile.CheckboxListTile.new({value: checked, checkColor: this.widget.checkBoxCheckColor, activeColor: this.widget.checkBoxActiveColor, title: new text.Text.new(dart.nullCheck(item.label), {style: this.widget.labelStyle, $creationLocationd_0dea112b090073317d4: C[32] || CT.C32}), controlAffinity: list_tile.ListTileControlAffinity.leading, onChanged: dart.fn(checked => this[_onItemCheckedChange](item.value, checked), T.boolNTovoid()), $creationLocationd_0dea112b090073317d4: C[36] || CT.C36});
+      }
+    }
+    (_MultiSelectDialogState.new = function() {
+      this[_selectedValues] = JSArrayOfV().of([]);
+      _MultiSelectDialogState.__proto__.new.call(this);
+      ;
+    }).prototype = _MultiSelectDialogState.prototype;
+    dart.addTypeTests(_MultiSelectDialogState);
+    _MultiSelectDialogState.prototype[_is__MultiSelectDialogState_default] = true;
+    dart.addTypeCaches(_MultiSelectDialogState);
+    dart.setMethodSignature(_MultiSelectDialogState, () => ({
+      __proto__: dart.getMethods(_MultiSelectDialogState.__proto__),
+      [_onItemCheckedChange]: dart.fnType(dart.void, [V, dart.nullable(core.bool)]),
+      [_onCancelTap]: dart.fnType(dart.void, []),
+      [_onSubmitTap]: dart.fnType(dart.void, []),
+      build: dart.fnType(framework.Widget, [framework.BuildContext]),
+      [_buildItem]: dart.fnType(framework.Widget, [dart.nullable(core.Object)])
+    }));
+    dart.setLibraryUri(_MultiSelectDialogState, I[0]);
+    dart.setFieldSignature(_MultiSelectDialogState, () => ({
+      __proto__: dart.getFields(_MultiSelectDialogState.__proto__),
+      [_selectedValues]: dart.finalFieldType(core.List$(V))
+    }));
+    return _MultiSelectDialogState;
+  });
+  multiselect_dialog._MultiSelectDialogState = multiselect_dialog._MultiSelectDialogState$();
+  dart.addTypeTests(multiselect_dialog._MultiSelectDialogState, _is__MultiSelectDialogState_default);
+  dart.trackLibraries("packages/multiselect_formfield/multiselect_dialog.dart", {
+    "package:multiselect_formfield/multiselect_dialog.dart": multiselect_dialog
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["multiselect_dialog.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;MAKU;;;;;;MACM;;;;;;;0CAHmB,OAAY;MAAZ;MAAY;;IAAM;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;MAOb;;;;;;MACvB;;;;;;MACD;;;;;;MACA;;;;;;MACA;;;;;;MACE;;;;;;MACG;;;;;;MACN;;;;;;MACA;;;;;;;AAgB0B;MAA4B;;;UAbzD;UACD;UACA;UACA;UACA;UACA;UACA;;UACA;UACA;UACA;;MARA;MACA;MACA;MACA;MACA;MACA;MACA;MACA;MACA;AACH,uDAAW,GAAG;;IAAC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAUF,QAAX;AACN,YAAI,AAAO,AAAsB;AACsB,UAArD,AAAgB,+BAAmC,eAA5B,AAAO;;MAElC;6BAE4B,WAAiB;AAOzC,QANF,cAAS;AACP,cAAW,eAAP,OAAO;AACqB,YAA9B,AAAgB,4BAAI,SAAS;;AAEI,YAAjC,AAAgB,+BAAO,SAAS;;;MAGtC;;AAGwB,QAAZ,qCAAI;MAChB;;AAGyC,QAA7B,mCAAI,cAAS;MACzB;;YAG0B;AACxB,cAAO,oCACE,AAAO,0BACP,AAAO,+CACa,sCAAU,iBAC5B,+DACA,iDACsB,oCAAS,MAAM,KAAK,MAAM,aAC9C,kCACiB,AAAE,AAAgB,eAA9B,AAAO,qDAAW,mNAIjB,wBACf,uCACS,kBAA6B,eAAxB,AAAO,iHACR,gFAEb,uCACS,kBAAyB,eAApB,AAAO,6GACR;MAInB;;sCAE2C;;AACnC,sBAAU,AAAgB,iCAAS,AAAK,IAAD;AAC7C,cAAO,qDACE,OAAO,cACF,AAAO,6CACN,AAAO,wCACb,kBACK,eAAV,AAAK,IAAD,iBACG,AAAO,oGAEyB,sDAC9B,QAAC,WAAY,2BAAqB,AAAK,IAAD,QAAQ,OAAO;MAEpE;;;MAnEM,wBAAqB;;;IAoE7B","file":"../../../../../../../../D:/packages/multiselect_formfield/multiselect_dialog.dart.lib.js"}');
+  // Exports:
+  return {
+    multiselect_dialog: multiselect_dialog
+  };
+}));
+
+//# sourceMappingURL=multiselect_dialog.dart.lib.js.map

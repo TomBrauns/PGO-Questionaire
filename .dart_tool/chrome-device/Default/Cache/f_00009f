@@ -1,0 +1,299 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/rendering/wrap.dart', 'packages/flutter/src/rendering/layer.dart'], (function load__packages__syncfusion_flutter_core__core_internal_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__rendering__wrap$46dart, packages__flutter__src__rendering__layer$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const wrap = packages__flutter__src__rendering__wrap$46dart.src__rendering__wrap;
+  const box = packages__flutter__src__rendering__layer$46dart.src__rendering__box;
+  var core_internal = Object.create(dart.library);
+  var $round = dartx.round;
+  dart._checkModuleNullSafetyMode(true);
+  var T = {
+    dynamicTodynamic: () => (T.dynamicTodynamic = dart.constFn(dart.fnType(dart.dynamic, [dart.dynamic])))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: core_internal.CustomScrollDirection.prototype,
+        [_name$]: "CustomScrollDirection.vertical",
+        index: 0
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: core_internal.CustomScrollDirection.prototype,
+        [_name$]: "CustomScrollDirection.horizontal",
+        index: 1
+      });
+    },
+    get C2() {
+      return C[2] = dart.constList([C[0] || CT.C0, C[1] || CT.C1], core_internal.CustomScrollDirection);
+    }
+  }, false);
+  var C = Array(3).fill(void 0);
+  var I = [
+    "file:///B:/Programme/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_core-19.2.49/lib/src/calendar/custom_looping_widget.dart",
+    "package:syncfusion_flutter_core/core_internal.dart"
+  ];
+  var _name$ = dart.privateName(core_internal, "_name");
+  core_internal.CustomScrollDirection = class CustomScrollDirection extends core.Object {
+    toString() {
+      return this[_name$];
+    }
+  };
+  (core_internal.CustomScrollDirection.new = function(index, _name) {
+    if (index == null) dart.nullFailed(I[0], 5, 6, "index");
+    if (_name == null) dart.nullFailed(I[0], 5, 6, "_name");
+    this.index = index;
+    this[_name$] = _name;
+    ;
+  }).prototype = core_internal.CustomScrollDirection.prototype;
+  dart.addTypeTests(core_internal.CustomScrollDirection);
+  dart.addTypeCaches(core_internal.CustomScrollDirection);
+  dart.setLibraryUri(core_internal.CustomScrollDirection, I[1]);
+  dart.setFieldSignature(core_internal.CustomScrollDirection, () => ({
+    __proto__: dart.getFields(core_internal.CustomScrollDirection.__proto__),
+    index: dart.finalFieldType(core.int),
+    [_name$]: dart.finalFieldType(core.String)
+  }));
+  dart.defineExtensionMethods(core_internal.CustomScrollDirection, ['toString']);
+  core_internal.CustomScrollDirection.vertical = C[0] || CT.C0;
+  core_internal.CustomScrollDirection.horizontal = C[1] || CT.C1;
+  core_internal.CustomScrollDirection.values = C[2] || CT.C2;
+  var _navigationDirection$ = dart.privateName(core_internal, "_navigationDirection");
+  var _position$ = dart.privateName(core_internal, "_position");
+  var _currentChildIndex$ = dart.privateName(core_internal, "_currentChildIndex");
+  core_internal.CustomScrollViewerLayout = class CustomScrollViewerLayout extends framework.MultiChildRenderObjectWidget {
+    createRenderObject(context) {
+      if (context == null) dart.nullFailed(I[0], 54, 59, "context");
+      return new core_internal._CustomScrollViewLayout.new(this[_navigationDirection$], this[_position$], this[_currentChildIndex$]);
+    }
+    updateRenderObject(context, renderObject) {
+      let t0;
+      if (context == null) dart.nullFailed(I[0], 61, 20, "context");
+      core_internal._CustomScrollViewLayout.as(renderObject);
+      if (renderObject == null) dart.nullFailed(I[0], 61, 53, "renderObject");
+      t0 = renderObject;
+      (() => {
+        t0.position = this[_position$];
+        t0.navigationDirection = this[_navigationDirection$];
+        t0.currentChildIndex = this[_currentChildIndex$];
+        return t0;
+      })();
+    }
+  };
+  (core_internal.CustomScrollViewerLayout.new = function(children, _navigationDirection, _position, _currentChildIndex, opts) {
+    if (children == null) dart.nullFailed(I[0], 46, 41, "children");
+    if (_navigationDirection == null) dart.nullFailed(I[0], 46, 56, "_navigationDirection");
+    if (_position == null) dart.nullFailed(I[0], 47, 12, "_position");
+    if (_currentChildIndex == null) dart.nullFailed(I[0], 47, 28, "_currentChildIndex");
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[_navigationDirection$] = _navigationDirection;
+    this[_position$] = _position;
+    this[_currentChildIndex$] = _currentChildIndex;
+    core_internal.CustomScrollViewerLayout.__proto__.new.call(this, {children: children, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = core_internal.CustomScrollViewerLayout.prototype;
+  dart.addTypeTests(core_internal.CustomScrollViewerLayout);
+  dart.addTypeCaches(core_internal.CustomScrollViewerLayout);
+  dart.setMethodSignature(core_internal.CustomScrollViewerLayout, () => ({
+    __proto__: dart.getMethods(core_internal.CustomScrollViewerLayout.__proto__),
+    createRenderObject: dart.fnType(core_internal._CustomScrollViewLayout, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(core_internal.CustomScrollViewerLayout, I[1]);
+  dart.setFieldSignature(core_internal.CustomScrollViewerLayout, () => ({
+    __proto__: dart.getFields(core_internal.CustomScrollViewerLayout.__proto__),
+    [_navigationDirection$]: dart.finalFieldType(core_internal.CustomScrollDirection),
+    [_position$]: dart.finalFieldType(core.double),
+    [_currentChildIndex$]: dart.finalFieldType(core.int)
+  }));
+  var _currentChild = dart.privateName(core_internal, "_currentChild");
+  var _firstChild = dart.privateName(core_internal, "_firstChild");
+  var _lastChild = dart.privateName(core_internal, "_lastChild");
+  var _updateChild = dart.privateName(core_internal, "_updateChild");
+  core_internal._CustomScrollViewLayout = class _CustomScrollViewLayout extends wrap.RenderWrap {
+    get navigationDirection() {
+      return this[_navigationDirection$];
+    }
+    set navigationDirection(value) {
+      if (value == null) dart.nullFailed(I[0], 77, 49, "value");
+      if (this[_navigationDirection$] == value) {
+        return;
+      }
+      this[_navigationDirection$] = value;
+    }
+    get currentChildIndex() {
+      return this[_currentChildIndex$];
+    }
+    set currentChildIndex(value) {
+      if (value == null) dart.nullFailed(I[0], 90, 29, "value");
+      if (this[_currentChildIndex$] == value) {
+        return;
+      }
+      this[_currentChildIndex$] = value;
+      this[_position$] = 0.0;
+      this[_updateChild]();
+      this.markNeedsLayout();
+    }
+    get position() {
+      return this[_position$];
+    }
+    set position(value) {
+      if (value == null) dart.nullFailed(I[0], 106, 23, "value");
+      if (this[_position$] == value) {
+        return;
+      }
+      this[_position$] = value;
+      this.markNeedsLayout();
+    }
+    performLayout() {
+      let t0, t0$, t0$0;
+      let currentChildXPos = 0.0;
+      let firstChildXPos = 0.0;
+      let lastChildXPos = 0.0;
+      let currentChildYPos = 0.0;
+      let firstChildYPos = 0.0;
+      let lastChildYPos = 0.0;
+      let currentChildParentData = null;
+      let firstChildParentData = null;
+      let lastChildParentData = null;
+      let width = this.constraints.maxWidth;
+      let height = this.constraints.maxHeight;
+      let children = this.getChildrenAsList();
+      this[_firstChild] = (t0 = this[_firstChild], t0 == null ? this.firstChild : t0);
+      this[_lastChild] = (t0$ = this[_lastChild], t0$ == null ? this.lastChild : t0$);
+      this[_currentChild] = (t0$0 = this[_currentChild], t0$0 == null ? this.childAfter(dart.nullCheck(this.firstChild)) : t0$0);
+      if (this[_navigationDirection$] == core_internal.CustomScrollDirection.horizontal) {
+        width = dart.notNull(width) / 3;
+      } else if (this[_navigationDirection$] == core_internal.CustomScrollDirection.vertical) {
+        height = dart.notNull(height) / 3;
+      }
+      if (this[_position$] == width || this[_position$] === -dart.notNull(width)) {
+        if (dart.equals(dart.dload(dart.dload(dart.dload(this[_currentChild], 'parentData'), 'offset'), 'dx'), width)) {
+          this[_position$] = 0.0;
+        }
+      } else if (this[_position$] == height || this[_position$] === -dart.notNull(height)) {
+        if (dart.equals(dart.dload(dart.dload(dart.dload(this[_currentChild], 'parentData'), 'offset'), 'dy'), height)) {
+          this[_position$] = 0.0;
+        }
+      }
+      firstChildParentData = wrap.WrapParentData.as(dart.dload(this[_firstChild], 'parentData'));
+      lastChildParentData = wrap.WrapParentData.as(dart.dload(this[_lastChild], 'parentData'));
+      currentChildParentData = wrap.WrapParentData.as(dart.dload(this[_currentChild], 'parentData'));
+      if (this[_navigationDirection$] == core_internal.CustomScrollDirection.horizontal) {
+        currentChildXPos = width;
+        lastChildXPos = dart.notNull(width) * 2;
+        firstChildXPos = firstChildXPos + dart.notNull(this[_position$]);
+        currentChildXPos = dart.notNull(currentChildXPos) + dart.notNull(this[_position$]);
+        lastChildXPos = lastChildXPos + dart.notNull(this[_position$]);
+        if (firstChildXPos[$round]() === -width[$round]()) {
+          firstChildXPos = dart.notNull(width) * 2;
+          this[_updateChild]();
+        } else if (lastChildXPos[$round]() === (dart.notNull(width) * 3)[$round]()) {
+          lastChildXPos = 0.0;
+          this[_updateChild]();
+        }
+      } else if (this[_navigationDirection$] == core_internal.CustomScrollDirection.vertical) {
+        currentChildYPos = height;
+        lastChildYPos = dart.notNull(height) * 2;
+        firstChildYPos = firstChildYPos + dart.notNull(this[_position$]);
+        currentChildYPos = dart.notNull(currentChildYPos) + dart.notNull(this[_position$]);
+        lastChildYPos = lastChildYPos + dart.notNull(this[_position$]);
+        if (firstChildYPos[$round]() === -height[$round]()) {
+          firstChildYPos = dart.notNull(height) * 2;
+          this[_updateChild]();
+        } else if (lastChildYPos[$round]() === (dart.notNull(height) * 3)[$round]()) {
+          lastChildYPos = 0.0;
+          this[_updateChild]();
+        }
+      }
+      firstChildParentData.offset = new ui.Offset.new(firstChildXPos, firstChildYPos);
+      currentChildParentData.offset = new ui.Offset.new(currentChildXPos, currentChildYPos);
+      lastChildParentData.offset = new ui.Offset.new(lastChildXPos, lastChildYPos);
+      dart.dsend(children, 'forEach', [dart.fn(child => dart.dsend(child, 'layout', [new box.BoxConstraints.new({minWidth: 0.0, minHeight: 0.0, maxWidth: width, maxHeight: height})], {parentUsesSize: true}), T.dynamicTodynamic())]);
+      this.size = new ui.Size.new(this.constraints.maxWidth, this.constraints.maxHeight);
+    }
+    [_updateChild]() {
+      let children = this.getChildrenAsList();
+      if (this[_currentChildIndex$] === 0) {
+        this[_currentChild] = dart.dsend(children, '_get', [this[_currentChildIndex$]]);
+        this[_firstChild] = dart.dsend(children, '_get', [2]);
+        this[_lastChild] = dart.dsend(children, '_get', [1]);
+      } else if (this[_currentChildIndex$] === 1) {
+        this[_currentChild] = dart.dsend(children, '_get', [this[_currentChildIndex$]]);
+        this[_firstChild] = dart.dsend(children, '_get', [0]);
+        this[_lastChild] = dart.dsend(children, '_get', [2]);
+      } else if (this[_currentChildIndex$] === 2) {
+        this[_currentChild] = dart.dsend(children, '_get', [this[_currentChildIndex$]]);
+        this[_firstChild] = dart.dsend(children, '_get', [1]);
+        this[_lastChild] = dart.dsend(children, '_get', [0]);
+      }
+    }
+  };
+  (core_internal._CustomScrollViewLayout.new = function(_navigationDirection, _position, _currentChildIndex) {
+    if (_navigationDirection == null) dart.nullFailed(I[0], 71, 12, "_navigationDirection");
+    if (_position == null) dart.nullFailed(I[0], 71, 39, "_position");
+    if (_currentChildIndex == null) dart.nullFailed(I[0], 71, 55, "_currentChildIndex");
+    this[_currentChild] = null;
+    this[_firstChild] = null;
+    this[_lastChild] = null;
+    this[_navigationDirection$] = _navigationDirection;
+    this[_position$] = _position;
+    this[_currentChildIndex$] = _currentChildIndex;
+    core_internal._CustomScrollViewLayout.__proto__.new.call(this);
+    ;
+  }).prototype = core_internal._CustomScrollViewLayout.prototype;
+  dart.addTypeTests(core_internal._CustomScrollViewLayout);
+  dart.addTypeCaches(core_internal._CustomScrollViewLayout);
+  dart.setMethodSignature(core_internal._CustomScrollViewLayout, () => ({
+    __proto__: dart.getMethods(core_internal._CustomScrollViewLayout.__proto__),
+    [_updateChild]: dart.fnType(dart.void, [])
+  }));
+  dart.setGetterSignature(core_internal._CustomScrollViewLayout, () => ({
+    __proto__: dart.getGetters(core_internal._CustomScrollViewLayout.__proto__),
+    navigationDirection: core_internal.CustomScrollDirection,
+    currentChildIndex: core.int,
+    position: core.double
+  }));
+  dart.setSetterSignature(core_internal._CustomScrollViewLayout, () => ({
+    __proto__: dart.getSetters(core_internal._CustomScrollViewLayout.__proto__),
+    navigationDirection: core_internal.CustomScrollDirection,
+    currentChildIndex: core.int,
+    position: core.double
+  }));
+  dart.setLibraryUri(core_internal._CustomScrollViewLayout, I[1]);
+  dart.setFieldSignature(core_internal._CustomScrollViewLayout, () => ({
+    __proto__: dart.getFields(core_internal._CustomScrollViewLayout.__proto__),
+    [_navigationDirection$]: dart.fieldType(core_internal.CustomScrollDirection),
+    [_currentChildIndex$]: dart.fieldType(core.int),
+    [_position$]: dart.fieldType(core.double),
+    [_currentChild]: dart.fieldType(dart.dynamic),
+    [_firstChild]: dart.fieldType(dart.dynamic),
+    [_lastChild]: dart.fieldType(dart.dynamic)
+  }));
+  dart.trackLibraries("packages/syncfusion_flutter_core/core_internal.dart", {
+    "package:syncfusion_flutter_core/core_internal.dart": core_internal
+  }, {
+    "package:syncfusion_flutter_core/core_internal.dart": ["src/calendar/custom_looping_widget.dart"]
+  }, '{"version":3,"sourceRoot":"","sources":["src/calendar/custom_looping_widget.dart"],"names":[],"mappings":"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","file":"../../../../../../../../D:/packages/syncfusion_flutter_core/core_internal.dart.lib.js"}');
+  // Exports:
+  return {
+    core_internal: core_internal
+  };
+}));
+
+//# sourceMappingURL=core_internal.dart.lib.js.map
